@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Assaye Bulti • Generative AI for Work & Research — portfolio and weekly submissions" />
+  <title>Assaye Bulti • Generative AI for Work & Research</title>
+  <style>
+    :root{
+      --bg: 255 255 255;
+      --text: 20 24 39;
+      --muted: 90 96 120;
+      --brand-1: 99 102 241;   /* indigo */
+      --brand-2: 6 182 212;    /* cyan */
+      --brand-3: 236 72 153;   /* pink */
+      --card: 255 255 255 / 0.7;
+      --ring: 0 0 0 / 0.08;
+      --radius-xl: 22px;
+    }
+
+    /* Base */
+    *, *::before, *::after{ box-sizing: border-box; }
+    html{ scroll-behavior: smooth; }
+    body{
+      margin: 0;
+      font: 16px/1.6 "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: rgb(var(--text));
+      background:
+        radial-gradient(1200px 800px at 110% -10%, rgba(var(--brand-3),0.25), transparent 60%),
+        radial-gradient(1200px 800px at -10% 10%, rgba(var(--brand-2),0.25), transparent 60%),
+        linear-gradient(180deg, #0f172a 0%, #0b1220 40%, #0a0f1a 100%);
+      background-attachment: fixed;
+      --container: min(1120px, 92vw);
+    }
+    a{ color: rgb(var(--brand-2)); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    /* Top Nav */
+    .nav{
+      position: sticky; top: 0; inset-inline: 0; z-index: 1000;
+      backdrop-filter: saturate(140%) blur(14px);
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.55));
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .nav-inner{ width: var(--container); margin-inline: auto; display: flex; align-items: center; justify-content: space-between; padding: 14px 8px; }
+    .brand{ display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: 0.2px; color: #fff; }
+    .brand .logo{ width: 28px; height: 28px; border-radius: 10px; background: conic-gradient(from 180deg, #ec4899, #06b6d4, #6366f1, #ec4899); box-shadow: 0 8px 30px rgba(99,102,241,0.35); }
+    .nav a{ color: #e5e7eb; opacity: 0.92; font-weight: 500; }
+    .nav-links{ display: flex; gap: 18px; align-items: center; }
+    .btn{
+      display: inline-flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 999px; font-weight: 600; letter-spacing: .2px;
+      background: linear-gradient(90deg, rgba(var(--brand-1),1), rgba(var(--brand-2),1)); color: white; border: 0; box-shadow: 0 10px 24px rgba(6,182,212,0.25);
+    }
+    .btn:hover{ transform: translateY(-1px); box-shadow: 0 18px 34px rgba(6,182,212,0.32); }
+
+    /* Hero */
+    .hero{ width: var(--container); margin: 40px auto 0; padding: 40px 10px 10px; color: #f8fafc; }
+    .hero .wrap{
+      display: grid; grid-template-columns: 1.1fr .9fr; gap: 30px; align-items: center;
+    }
+    .hero h1{ font-size: clamp(28px, 5vw, 56px); line-height: 1.12; margin: 0 0 10px; }
+    .hero p.lead{ font-size: clamp(16px, 1.6vw, 20px); opacity: .9; margin: 0 0 22px; }
+    .tagline{ display: inline-flex; gap: 8px; align-items: center; font-weight: 700; color: #e2e8f0; margin-bottom: 6px; opacity: .9; }
+    .hero .card{
+      border-radius: var(--radius-xl);
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 18px 60px rgba(0,0,0,0.35);
+      padding: 22px; color: #cbd5e1;
+    }
+    .stats{ display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; margin-top: 12px; }
+    .stat{ padding: 14px; border-radius: 14px; background: linear-gradient(180deg, rgba(2,6,23,0.42), rgba(2,6,23,0.2)); border: 1px solid rgba(255,255,255,0.06); }
+    .stat b{ display: block; font-size: 20px; color: #fff; }
+
+    /* Section wrapper */
+    section{ width: var(--container); margin: 56px auto; padding: 0 10px; }
+    .section-title{ color: #e5e7eb; font-size: clamp(22px, 3vw, 32px); margin: 0 0 14px; letter-spacing: .3px; }
+    .section-sub{ color: #9fb0c3; margin: 0 0 22px; }
+
+    /* Cards */
+    .grid{ display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; }
+    .card{
+      grid-column: span 12;
+      background: linear-gradient(180deg, rgba(255,255,255,0.75), rgba(255,255,255,0.55));
+      border: 1px solid rgba(255,255,255,0.45);
+      border-radius: var(--radius-xl);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 20px 60px rgba(2, 6, 23, 0.35);
+      padding: 22px;
+    }
+    .card.dark{ background: linear-gradient(180deg, rgba(15,23,42,0.65), rgba(15,23,42,0.5)); color: #e5e7eb; border-color: rgba(255,255,255,0.08); }
+
+    /* About Me */
+    .skills{ display: flex; flex-wrap: wrap; gap: 10px; }
+    .chip{
+      padding: 8px 12px; border-radius: 999px; font-size: 13px; font-weight: 600; letter-spacing: .2px;
+      border: 1px solid rgba(0,0,0,0.06);
+      background: linear-gradient(180deg, #fff, #f6f8fb);
+      box-shadow: 0 8px 18px rgba(2,6,23,0.06);
+    }
+
+    /* Experience timeline */
+    .timeline{ position: relative; padding-left: 18px; }
+    .timeline::before{ content: ""; position: absolute; left: 6px; top: 2px; bottom: 2px; width: 2px; background: linear-gradient(180deg, rgba(var(--brand-2),.6), rgba(var(--brand-1),.6)); border-radius: 2px; }
+    .t-item{ position: relative; padding-left: 18px; margin: 12px 0; }
+    .t-item::before{ content: ""; position: absolute; left: -2px; top: 8px; width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(180deg, rgb(var(--brand-1)), rgb(var(--brand-2))); box-shadow: 0 0 0 4px rgba(6,182,212,0.15); }
+    .t-role{ font-weight: 700; }
+    .t-org{ opacity: .85; }
+    .t-time{ color: #64748b; font-size: 14px; }
+
+    /* Course modules */
+    .modules{ display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
+    .module{ grid-column: span 12; padding: 18px; border-radius: 18px; border: 1px solid rgba(255,255,255,0.08); background: linear-gradient(180deg, rgba(15,23,42,0.85), rgba(2,6,23,0.7)); color: #e2e8f0; }
+    .module h4{ margin: 0 0 8px; }
+    .rubric{ display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 12px; }
+    .rubric .r{ background: linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,0.04)); padding: 16px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.1); }
+
+    /* Weekly submissions */
+    .weeks{ display: grid; grid-template-columns: repeat(12, 1fr); gap: 14px; }
+    .week{ grid-column: span 12; background: linear-gradient(180deg, #ffffff, #f4f7fb); border: 1px solid rgba(0,0,0,0.06); border-radius: 16px; padding: 18px; transition: transform .18s ease, box-shadow .18s ease; }
+    .week:hover{ transform: translateY(-3px); box-shadow: 0 14px 30px rgba(2,6,23,.12); }
+    .week h4{ margin: 0 0 6px; }
+    .week .meta{ color: #667085; font-size: 14px; }
+
+    /* Footer */
+    footer{ width: var(--container); margin: 60px auto 40px; color: #9fb0c3; padding: 0 10px; }
+    .footer-card{ border-radius: var(--radius-xl); padding: 18px; border: 1px solid rgba(255,255,255,0.08); background: linear-gradient(180deg, rgba(15,23,42,0.65), rgba(2,6,23,0.6)); color: #cbd5e1; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+
+    /* Responsive */
+    @media (min-width: 720px){
+      .card.span-6{ grid-column: span 6; }
+      .module{ grid-column: span 6; }
+      .week{ grid-column: span 6; }
+    }
+    @media (min-width: 980px){
+      .hero .wrap{ grid-template-columns: 1.2fr .8fr; }
+      .week{ grid-column: span 4; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand"><span class="logo" aria-hidden="true"></span> <span>Generative AI for Work & Research</span></div>
+      <div class="nav-links">
+        <a href="#about">About me</a>
+        <a href="#course">About the course</a>
+        <a href="#weeks">Weekly submissions</a>
+        <a class="btn" href="#weeks">Explore Work</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="wrap">
+      <div>
+        <div class="tagline">Assaye Bulti • Portfolio</div>
+        <h1>Building useful AI‑powered workflows for data, research, and decision‑making.</h1>
+        <p class="lead">Statistics and Information Management specialist with 12+ years designing surveys, analytics pipelines, and interactive dashboards across UNICEF country programs. Now applying Generative AI to accelerate analysis, automate reporting, and communicate results with clarity.</p>
+        <div class="stats">
+          <div class="stat"><b>12+ yrs</b><span>Data & IM leadership</span></div>
+          <div class="stat"><b>R • Python • SQL</b><span>Analytics toolkit</span></div>
+          <div class="stat"><b>Dashboards</b><span>R Shiny • Power BI • Tableau</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <strong>What I do</strong>
+        <ul>
+          <li>Design survey protocols and digital data collection systems (ODK, Kobo, SurveyCTO).</li>
+          <li>Build automated analytics & reporting with R, Python, and SQL.</li>
+          <li>Create dashboards and reproducible reports (Shiny, Quarto, Tableau, Power BI).</li>
+          <li>Develop M&E frameworks with SMART indicators and harmonized tools.</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Me -->
+  <section id="about">
+    <h2 class="section-title">About me</h2>
+    <p class="section-sub">I work across the full data lifecycle—collection, processing, quality assurance, analytics, visualization, and systemization—partnering with field teams and decision‑makers to turn data into action.</p>
+
+    <div class="grid">
+      <article class="card span-6">
+        <h3>Core strengths</h3>
+        <div class="skills" aria-label="skills">
+          <span class="chip">Survey design & sampling</span>
+          <span class="chip">Data pipelines</span>
+          <span class="chip">Automated reporting</span>
+          <span class="chip">Dashboarding</span>
+          <span class="chip">M&E frameworks</span>
+          <span class="chip">Geospatial analysis</span>
+          <span class="chip">Quarto & R Markdown</span>
+          <span class="chip">Git/GitHub</span>
+        </div>
+        <h3 style="margin-top:18px">Tech I use</h3>
+        <div class="skills">
+          <span class="chip">R</span>
+          <span class="chip">Python</span>
+          <span class="chip">SQL (BigQuery, Postgres, SQL Server)</span>
+          <span class="chip">STATA</span>
+          <span class="chip">ODK / Kobo / SurveyCTO</span>
+          <span class="chip">R Shiny</span>
+          <span class="chip">Power BI</span>
+          <span class="chip">Tableau</span>
+          <span class="chip">ArcGIS / QGIS</span>
+        </div>
+      </article>
+
+      <article class="card span-6">
+        <h3>Selected experience</h3>
+        <div class="timeline">
+          <div class="t-item">
+            <div class="t-role">Information Management Specialist <span class="t-org">• UNICEF South Sudan</span></div>
+            <div class="t-time">Jul 2023 — Present</div>
+            <div>Led end‑to‑end analytics and automated reporting; enterprise data modeling and harmonized M&E tools; coordinated IM working groups and capacity building.</div>
+          </div>
+          <div class="t-item">
+            <div class="t-role">Statistics & Monitoring Specialist <span class="t-org">• UNICEF Nigeria</span></div>
+            <div class="t-time">Sept 2019 — Jun 2023</div>
+            <div>Designed data systems and dashboards, automated grant reporting cycles, delivered country profiles and KPI tracking products.</div>
+          </div>
+          <div class="t-item">
+            <div class="t-role">Data Officer / Consultant <span class="t-org">• UNICEF Nigeria</span></div>
+            <div class="t-time">2011 — 2019</div>
+            <div>Built SMS/online data collection and monitoring systems; led national surveys and analytical reporting.</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- About the Course -->
+  <section id="course">
+    <h2 class="section-title">About the course</h2>
+    <p class="section-sub">An 8‑week, live cohort bootcamp focused on no‑code tools and practical AI workflows for research productivity. Features include weekly live workshops, help sessions, a private community, personalized feedback, capstone coaching, and a shareable certificate with lifetime access to tutorials.</p>
+
+    <div class="modules">
+      <article class="module">
+        <h4>Module 1 — Websites, Documents & Presentations</h4>
+        <p>How LLMs work; generate Markdown/LaTeX/HTML; build simple research sites; use AI presentation tools for clear scientific communication.</p>
+      </article>
+      <article class="module">
+        <h4>Module 2 — AI‑Automated Data Analysis</h4>
+        <p>Use ChatGPT Code Interpreter; build automated dashboards; process datasets; batch file conversion; automated reports and spreadsheet workflows.</p>
+      </article>
+      <article class="module">
+        <h4>Module 3 — GenAI for Research & Text Analysis</h4>
+        <p>Efficient literature reviews (Elicit, LiteRev); text classification; sentiment analysis; knowledge maps; summarization and synthesis systems.</p>
+      </article>
+      <article class="module">
+        <h4>Module 4 — Custom GPTs & Chatbots</h4>
+        <p>LLM chat architecture, context windows, and RAG; custom GPTs; Botpress chatbots; knowledge base integration.</p>
+      </article>
+      <article class="module">
+        <h4>Module 5 — AI for Task Automation</h4>
+        <p>AI automation and agent‑based systems; email response automations; browser control agents; orchestration of complex flows.</p>
+      </article>
+      <article class="module">
+        <h4>Module 6 — Communication & Outreach</h4>
+        <p>AI‑generated summaries for multiple audiences; scientific figures and diagrams; video abstracts; prompts for visualization; content scheduling.</p>
+      </article>
+      <article class="module">
+        <h4>Module 7 — Capstone Project & Showcase</h4>
+        <p>Project progress checks, peer feedback, final presentations, and a public Q&A.</p>
+      </article>
+    </div>
+
+    <div class="card dark" style="margin-top:16px">
+      <strong>Grading & Participation</strong>
+      <div class="rubric" style="margin-top:10px">
+        <div class="r"><b>Online quizzes</b><div>15%</div></div>
+        <div class="r"><b>Workshop assignments</b><div>35%</div></div>
+        <div class="r"><b>Attendance & participation</b><div>10%</div></div>
+        <div class="r"><b>Final project</b><div>40%</div></div>
+      </div>
+      <p style="margin-top:10px;color:#93c5fd">Passing grade: 80% • Attend at least 5 workshops for full attendance credit.</p>
+    </div>
+  </section>
+
+  <!-- Weekly Submissions -->
+  <section id="weeks">
+    <h2 class="section-title">My weekly submissions</h2>
+    <p class="section-sub">Each card will link to a live demo, write‑up, or repository. Placeholders for now.</p>
+    <div class="weeks">
+      <a class="week" href="#" aria-label="Week 1 submission">
+        <h4>Week 1 — LLM Foundations & Site Setup</h4>
+        <div class="meta">Markdown/LaTeX outputs • Static site scaffold • Design system</div>
+      </a>
+      <a class="week" href="#" aria-label="Week 2 submission">
+        <h4>Week 2 — AI‑Automated Data Analysis</h4>
+        <div class="meta">Code Interpreter notebook • Automated dashboard mock</div>
+      </a>
+      <a class="week" href="#" aria-label="Week 3 submission">
+        <h4>Week 3 — Text Mining & Literature Review</h4>
+        <div class="meta">Elicit/LiteRev pipeline • Topic map</div>
+      </a>
+      <a class="week" href="#" aria-label="Week 4 submission">
+        <h4>Week 4 — Custom GPTs & RAG</h4>
+        <div class="meta">Domain‑specific assistant • Retrieval evaluation</div>
+      </a>
+      <a class="week" href="#" aria-label="Week 5 submission">
+        <h4>Week 5 — Task Automation</h4>
+        <div class="meta">Agentic workflow • Browser automation demo</div>
+      </a>
+      <a class="week" href="#" aria-label="Week 6 submission">
+        <h4>Week 6 — Communication & Outreach</h4>
+        <div class="meta">Figure generation • Video abstract storyboard</div>
+      </a>
+      <a class="week" href="#" aria-label="Week 7 submission">
+        <h4>Week 7 — Capstone Refinement</h4>
+        <div class="meta">Peer feedback • Iterations • Metrics</div>
+      </a>
+      <a class="week" href="#" aria-label="Week 8 submission">
+        <h4>Week 8 — Final Showcase</h4>
+        <div class="meta">Final demo • Slides • One‑pager</div>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-card">
+      <div>
+        <div style="font-weight:700;color:#e2e8f0">Thanks for visiting.</div>
+        <div>Portfolio will be updated weekly with links to live demos and reports.</div>
+      </div>
+      <a class="btn" href="#about">Back to top</a>
+    </div>
+  </footer>
+</body>
+</html>
