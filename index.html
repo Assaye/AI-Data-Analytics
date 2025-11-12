@@ -1,365 +1,364 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    
-    <script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js"></script>
-    <script src="https://files.bpcontent.cloud/2025/11/12/13/20251112133521-AFOJEBXG.js" defer></script>
+    
+    <script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/11/12/13/20251112133521-AFOJEBXG.js" defer></script>
 
 
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assaye Bulti - GenAI Portfolio</title>
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts (Inter) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Lucide Icons CDN (Corrected from lucide-react to lucide) -->
-    <script src="https://unpkg.com/lucide@0.294.0/dist/umd/lucide.min.js"></script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assaye Bulti - GenAI Portfolio</title>
+    
+        <script src="https://cdn.tailwindcss.com"></script>
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+        <script src="https://unpkg.com/lucide@0.294.0/dist/umd/lucide.min.js"></script>
 
-    <style>
-        /* Base styles */
-        body {
-            font-family: 'Inter', sans-serif;
-            /* A deep, modern dark background */
-            background-color: #050816;
-            color: #e0e0e0;
-            /* Subtle radial gradients for depth, as requested */
-            background-image: radial-gradient(at 20% 20%, hsla(272, 76%, 53%, 0.1) 0px, transparent 50%),
-                              radial-gradient(at 80% 70%, hsla(217, 76%, 53%, 0.1) 0px, transparent 50%);
-        }
+    <style>
+        /* Base styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            /* A deep, modern dark background */
+            background-color: #050816;
+            color: #e0e0e0;
+            /* Subtle radial gradients for depth, as requested */
+            background-image: radial-gradient(at 20% 20%, hsla(272, 76%, 53%, 0.1) 0px, transparent 50%),
+                              radial-gradient(at 80% 70%, hsla(217, 76%, 53%, 0.1) 0px, transparent 50%);
+        }
 
-        /* Gradient text utility class */
-        .gradient-text {
-            /* A beautiful, rich gradient */
-            background-image: linear-gradient(90deg, #a855f7, #ec4899, #f59e0b);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
+        /* Gradient text utility class */
+        .gradient-text {
+            /* A beautiful, rich gradient */
+            background-image: linear-gradient(90deg, #a855f7, #ec4899, #f59e0b);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
 
-        /* Gradient border card container */
-        .gradient-border-card {
-            position: relative;
-            /* Dark, semi-transparent card background */
-            background: #0f172a; 
-            border-radius: 1rem; /* 16px */
-            overflow: hidden;
-            z-index: 1;
-            transition: all 0.3s ease-in-out;
-            border: 1px solid #1e293b; /* Fallback border */
-            padding: 1.5rem; /* Added padding directly to the card */
-        }
+        /* Gradient border card container */
+        .gradient-border-card {
+            position: relative;
+            /* Dark, semi-transparent card background */
+            background: #0f172a; 
+            border-radius: 1rem; /* 16px */
+            overflow: hidden;
+            z-index: 1;
+            transition: all 0.3s ease-in-out;
+            border: 1px solid #1e293b; /* Fallback border */
+            padding: 1.5rem; /* Added padding directly to the card */
+        }
 
-        /* The pseudo-element that creates the gradient border */
-        .gradient-border-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            border-radius: inherit;
-            padding: 2px; /* Controls the thickness of the gradient border */
-            background: linear-gradient(120deg, #a855f7, #ec4899, #f59e0b);
-            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: destination-out;
-            mask-composite: exclude;
-            z-index: -1;
-            opacity: 0.7;
-            transition: opacity 0.3s ease;
-        }
+        /* The pseudo-element that creates the gradient border */
+        .gradient-border-card::before {
+            content: '';
+            position: absolute;
+  _         top: 0; left: 0; right: 0; bottom: 0;
+            border-radius: inherit;
+            padding: 2px; /* Controls the thickness of the gradient border */
+            background: linear-gradient(120deg, #a855f7, #ec4899, #f59e0b);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: destination-out;
+            mask-composite: exclude;
+            z-index: -1;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
 
-        .gradient-border-card:hover {
-            transform: translateY(-5px) scale(1.01);
-            box-shadow: 0 10px 30px rgba(168, 85, 247, 0.1);
-        }
+        .gradient-border-card:hover {
+            transform: translateY(-5px) scale(1.01);
+            box-shadow: 0 10px 30px rgba(168, 85, 247, 0.1);
+        }
 
-        .gradient-border-card:hover::before {
-            opacity: 1;
-        }
+        .gradient-border-card:hover::before {
+            opacity: 1;
+        }
 
-        /* Sticky header glassmorphism */
-        .sticky-header {
-            background-color: rgba(5, 8, 22, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        /* Placeholder card styling */
-        .placeholder-card {
-            background: #0f172a; /* Same as other cards */
-            border: 1px dashed #334155; /* Dashed border to show it's a placeholder */
-            opacity: 0.7;
-            transition: all 0.3s ease;
-        }
-        .placeholder-card:hover {
-            opacity: 1;
-            border-color: #a855f7;
-            transform: translateY(-5px);
-        }
-    </style>
+        /* Sticky header glassmorphism */
+        .sticky-header {
+            background-color: rgba(5, 8, 22, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Placeholder card styling */
+        .placeholder-card {
+            background: #0f172a; /* Same as other cards */
+            border: 1px dashed #334155; /* Dashed border to show it's a placeholder */
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+        .placeholder-card:hover {
+            opacity: 1;
+            border-color: #a855f7;
+            transform: translateY(-5px);
+        }
+    </style>
 </head>
 <body class="antialiased">
 
-    <!-- Header -->
-    <header class="sticky top-0 z-50 w-full sticky-header">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo/Name -->
-                <div class="flex-shrink-0">
-                    <a href="#" class="text-2xl font-bold text-white">Assaye Bulti</a>
-                </div>
-                <!-- Navigation Links -->
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#about-me" class="text-gray-300 hover:text-purple-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">About Me</a>
-                        <a href="#about-course" class="text-gray-300 hover:text-purple-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">The Course</a>
-                        <a href="#submissions" class="text-gray-300 hover:text-purple-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">My Submissions</a>
-                    </div>
-                </div>
-                <!-- Mobile menu button (optional, but good practice) -->
-                <div class="-mr-2 flex md:hidden">
-                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-                        <span class="sr-only">Open main menu</span>
-                        <!-- Icon for menu (hamburger) -->
-                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                        </svg>
-                    </button>
-                    
-                </div>
-            </div>
-        </nav>
-    </header>
+        <header class="sticky top-0 z-50 w-full sticky-header">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-white">Assaye Bulti</a>
+                </div>
+                                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                  _     <a href="#about-me" class="text-gray-300 hover:text-purple-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">About Me</a>
+                        <a href="#about-course" class="text-gray-300 hover:text-purple-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">The Course</a>
+                        <a href="#submissions" class="text-gray-300 hover:text-purple-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">My Submissions</a>
+                                                <a href="#contact" class="text-gray-300 hover:text-purple-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                </div>
+                                <div class="-mr-2 flex md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                                                <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                    
+                </div>
+            </div>
+        </nav>
+    </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section id="hero" class="pt-24 pb-32">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight">
-                    <span class="gradient-text">Generative AI for Work</span>
-                    <span class="block text-white">& Research Productivity</span>
-                </h1>
-                <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-                    A portfolio by Assaye Bulti on Use of Generative AI for Data and Text Analysis and Automation !
-                </p>
-            </div>
-        </section>
+        <main>
+                <section id="hero" class="pt-24 pb-32">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight">
+                    <span class="gradient-text">Generative AI for Work</span>
+                    <span class="block text-white">& Research Productivity</span>
+                </h1>
+                <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+                    A portfolio by Assaye Bulti on Use of Generative AI for Data and Text Analysis and Automation !
+                </p>
+            </div>
+        </section>
 
-        <!-- About Me Section -->
-        <section id="about-me" class="py-24 bg-black bg-opacity-20">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-extrabold gradient-text">About Me</h2>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-12">
-                    <!-- Profile Photo Placeholder -->
-                    <div class="flex-shrink-0">
-                        <div class="w-48 h-48 md:w-64 md:h-64 rounded-full p-2 bg-gradient-to-br from-purple-500 to-pink-500">
-                            <div class="w-full h-full rounded-full bg-gray-800 flex items-center justify-center">
-                                <svg data-lucide="user" class="w-24 h-24 text-gray-500"></svg>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Bio Content -->
-                    <div class="flex-1 text-left">
-                        <h3 class="text-3xl font-bold text-white mb-4">Assaye Bulti</h3>
-                        <h4 class="text-xl font-semibold text-purple-400 mb-6">Data Specialist</h4>
-                        <p class="text-gray-300 text-lg mb-4 leading-relaxed">
-                            I am a Data Specialist with over 12 years of experience in statistical data processing, database management, health data analysis, and geospatial data integration. My expertise lies in building automated tools, managing complete data lifecycles, and delivering actionable insights to inform strategic decision-making.
-                        </p>
-                        <p class="text-gray-300 text-lg mb-4 leading-relaxed">
-                            My skills in R, Python, SQL, R Shiny, Tableau, and Power BI have allowed me to create user-friendly dashboards and analytical tools for complex datasets.
-                        </p>
-                        <p class="text-gray-300 text-lg leading-relaxed">
-                            I am currently expanding my expertise in Generative AI through this course to leverage these cutting-edge tools for enhancing data analysis, automating complex workflows, and pioneering new methods for research and productivity.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+                <section id="about-me" class="py-24 bg-black bg-opacity-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-extrabold gradient-text">About Me</h2>
+                </div>
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                                        <div class="flex-shrink-0">
+                        <div class="w-48 h-48 md:w-64 md:h-64 rounded-full p-2 bg-gradient-to-br from-purple-500 to-pink-500">
+                            <div class="w-full h-full rounded-full bg-gray-800 flex items-center justify-center">
+                                <svg data-lucide="user" class="w-24 h-24 text-gray-500"></svg>
+                            </div>
+                        </div>
+                    </div>
+                          _           <div class="flex-1 text-left">
+                        <h3 class="text-3xl font-bold text-white mb-4">Assaye Bulti</h3>
+                        <h4 class="text-xl font-semibold text-purple-400 mb-6">Data Specialist</h4>
+                        <p class="text-gray-300 text-lg mb-4 leading-relaxed">
+            _               I am a Data Specialist with over 12 years of experience in statistical data processing, database management, health data analysis, and geospatial data integration. My expertise lies in building automated tools, managing complete data lifecycles, and delivering actionable insights to inform strategic decision-making.
+                        </p>
+                        <p class="text-gray-300 text-lg mb-4 leading-relaxed">
+                            My skills in R, Python, SQL, R Shiny, Tableau, and Power BI have allowed me to create user-friendly dashboards and analytical tools for complex datasets.
+                        </p>
+                        <p class="text-gray-300 text-lg leading-relaxed">
+                            I am currently expanding my expertise in Generative AI through this course to leverage these cutting-edge tools for enhancing data analysis, automating complex workflows, and pioneering new methods for research and productivity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <!-- About the Course Section -->
-        <section id="about-course" class="py-24">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-extrabold gradient-text">About the Course</h2>
-                    <p class="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">
-                        This 8-week guided course focuses on mastering no-code AI tools for task automation in work and research.
-                    </p>
-                </div>
-                
-                <!-- Modules Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    
-                    <!-- Module 1 Card -->
-                    <div class="gradient-border-card">
-                        <div class="flex items-center mb-4">
-                            <svg data-lucide="layout-template" class="w-8 h-8 text-purple-400 mr-3"></svg>
-                            <h3 class="text-xl font-bold text-white">Websites, Documents & Presentations</h3>
-                        </div>
-                        <p class="text-gray-400">
-                            How LLMs work to generate text, create project websites with no-code tools (like Canvas), and design clear presentations.
-                        </p>
-                    </div>
+                <section id="about-course" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-extrabold gradient-text">About the Course</h2>
+                    <p class="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">
+                        This 8-week guided course focuses on mastering no-code AI tools for task automation in work and research.
+                    </p>
+                </div>
+                
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                                        <div class="gradient-border-card">
+                        <div class="flex items-center mb-4">
+                            <svg data-lucide="layout-template" class="w-8 h-8 text-purple-400 mr-3"></svg>
+                            <h3 class="text-xl font-bold text-white">Websites, Documents & Presentations</h3>
+                        </div>
+                        <p class="text-gray-400">
+                            How LLMs work to generate text, create project websites with no-code tools (like Canvas), and design clear presentations.
+                        </p>
+                    </div>
 
-                    <!-- Module 2 Card -->
-                    <div class="gradient-border-card">
-                        <div class="flex items-center mb-4">
-                            <svg data-lucide="bar-chart-3" class="w-8 h-8 text-purple-400 mr-3"></svg>
-                            <h3 class="text-xl font-bold text-white">AI-Automated Data Analysis</h3>
-                        </div>
-                        <p class="text-gray-400">
-                            Cursor and other AI tools like Code Interpreter and Julius to process datasets, visualize results, and create automated reports.
-                        </p>
-                    </div>
+                                      _ <div class="gradient-border-card">
+                        <div class="flex items-center mb-4">
+                            <svg data-lucide="bar-chart-3" class="w-8 h-8 text-purple-400 mr-3"></svg>
+                            <h3 class="text-xl font-bold text-white">AI-Automated Data Analysis</h3>
+                        </div>
+                        <p class="text-gray-400">
+                            Cursor and other AI tools like Code Interpreter and Julius to process datasets, visualize results, and create automated reports.
+                        </p>
+                    </div>
 
-                    <!-- Module 3 Card -->
-                    <div class="gradient-border-card">
-                        <div class="flex items-center mb-4">
-                            <svg data-lucide="search-check" class="w-8 h-8 text-purple-400 mr-3"></svg>
-                            <h3 class="text-xl font-bold text-white">GenAI for Research & Text Analysis</h3>
-                        </div>
-                        <p class="text-gray-400">
-                            Using AI for efficient literature reviews (Elicit, LiteRev), text classification, and synthesizing knowledge from large text collections.
-                        </p>
-                    </div>
+                                        <div class="gradient-border-card">
+                        <div class="flex items-center mb-4">
+                            <svg data-lucide="search-check" class="w-8 h-8 text-purple-400 mr-3"></svg>
+                            <h3 class="text-xl font-bold text-white">GenAI for Research & Text Analysis</h3>
+                        </div>
+                        <p class="text-gray-400">
+                            Using AI for efficient literature reviews (Elicit, LiteRev), text classification, and synthesizing knowledge from large text collections.
+                        </p>
+                    </div>
 
-                    <!-- Module 4 Card -->
-                    <div class="gradient-border-card">
-                        <div class="flex items-center mb-4">
-                            <svg data-lucide="bot" class="w-8 h-8 text-purple-400 mr-3"></svg>
-                            <h3 class="text-xl font-bold text-white">Custom GPTs and Chatbots</h3>
-                        </div>
-                        <p class="text-gray-400">
-                            LLM architecture (RAG systems) to build custom GPTs and interactive chatbots for research assistance.
-                        </col>
-                    </div>
+                                        <div class="gradient-border-card">
+                        <div class="flex items-center mb-4">
+                            <svg data-lucide="bot" class="w-8 h-8 text-purple-400 mr-3"></svg>
+                            <h3 class="text-xl font-bold text-white">Custom GPTs and Chatbots</h3>
+          _             </div>
+                        <p class="text-gray-400">
+                            LLM architecture (RAG systems) to build custom GPTs and interactive chatbots for research assistance.
+                        </col>
+        _           </div>
 
-                    <!-- Module 5 Card -->
-                    <div class="gradient-border-card">
-                        <div class="flex items-center mb-4">
-                            <svg data-lucide="workflow" class="w-8 h-8 text-purple-400 mr-3"></svg>
-                            <h3 class="text-xl font-bold text-white">AI for Task Automation</h3>
-                        </div>
-                        <p class="text-gray-400">
-                            Strategies for automating repetitive tasks using AI agents, email response automations, and browser control.
-                        </p>
-                    </div>
+                    A                 <div class="gradient-border-card">
+                        <div class="flex items-center mb-4">
+                            <svg data-lucide="workflow" class="w-8 h-8 text-purple-400 mr-3"></svg>
+                            <h3 class="text-xl font-bold text-white">AI for Task Automation</h3>
+                        </div>
+                        <p class="text-gray-400">
+                            Strategies for automating repetitive tasks using AI agents, email response automations, and browser control.
+                        </p>
+                    </div>
 
-                    <!-- Module 6 Card -->
-                    <div class="gradient-border-card">
-                        <div class="flex items-center mb-4">
-                            <svg data-lucide="share-2" class="w-8 h-8 text-purple-400 mr-3"></svg>
-                            <h3 class="text-xl font-bold text-white">GenAI for Communication</h3>
-                        </div>
-                        <p class="text-gray-400">
-                            AI-driven approaches for research dissemination, including summaries, designing scientific figures, and video abstracts.
-                        </p>
-                    </div>
-                    
-                    <!-- Module 7 Card -->
-                    <div class="gradient-border-card lg:col-span-3">
-                         <div class="flex items-center mb-4">
-                            <svg data-lucide="award" class="w-8 h-8 text-purple-400 mr-3"></svg>
-                            <h3 class="text-xl font-bold text-white">Capstone Project & Showcase</h3>
-                        </div>
-                        <p class="text-gray-400">
-                            Collaborating to create and refine a final AI solution, tool, or presentation, concluding with a showcase to peers and guests.
-                        </p>
-                    </div>
+                                        <div class="gradient-border-card">
+                        <div class="flex items-center mb-4">
+                    _       <svg data-lucide="share-2" class="w-8 h-8 text-purple-400 mr-3"></svg>
+AA                       <h3 class="text-xl font-bold text-white">GenAI for Communication</h3>
+                        </div>
+                        <p class="text-gray-400">
+                            AI-driven approaches for research dissemination, including summaries, designing scientific figures, and video abstracts.
+                        </p>
+                    </div>
+                    
+                    IA               <div class="gradient-border-card lg:col-span-3">
+                         <div class="flex items-center mb-4">
+                            <svg data-lucide="award" class="w-8 h-8 text-purple-400 mr-3"></svg>
+                            <h3 class="text-xl font-bold text-white">Capstone Project & Showcase</h3>
+                        </div>
+                        <p class="text-gray-400">
+A                         Collaborating to create and refine a final AI solution, tool, or presentation, concluding with a showcase to peers and guests.
+                        </p>
+                    </div>
 
-                </div>
-            </div>
-        </section>
+                </div>
+            </div>
+        </section>
 
-        <!-- My Weekly Submissions Section -->
-        <section id="submissions" class="py-24 bg-black bg-opacity-20">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-extrabold gradient-text">My Weekly Update</h2>
-                    <p class="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">
-                        This section will be updated weekly with new updates.
-                    </p>
-                </div>
+                <section id="submissions" class="py-24 bg-black bg-opacity-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-extrabold gradient-text">My Weekly Update</h2>
+                    <p class="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">
+                        This section will be updated weekly with new updates.
+                    </p>
+                </div>
 
-                <!-- Submissions Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    
-                    <!-- Placeholder Cards -->
-                    <div class="placeholder-card rounded-lg p-6 text-center">
-                        <svg data-lucide="clock-3" class="w-12 h-12 text-gray-500 mx-auto mb-4"></svg>
-                        <h3 class="text-lg font-semibold text-white mb-2">Week 1 Update</h3>
-                        <p class="text-gray-400">Websites & Documents</p>
-                        <span class="mt-4 inline-block text-sm text-yellow-500 font-medium">Pending...</span>
-                    </div>
-                    
-                    <div class="placeholder-card rounded-lg p-6 text-center">
-                        <svg data-lucide="clock-3" class="w-12 h-12 text-gray-500 mx-auto mb-4"></svg>
-                        <h3 class="text-lg font-semibold text-white mb-2">Week 2 Update</h3>
-                        <p class="text-gray-400">Automated Data Analysis</p>
-                        <span class="mt-4 inline-block text-sm text-yellow-500 font-medium">Pending...</span>
-                    </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    
+                                        <div class="placeholder-card rounded-lg p-6 text-center">
+                        <svg data-lucide="clock-3" class="w-12 h-12 text-gray-500 mx-auto mb-4"></svg>
+                        <h3 class="text-lg font-semibold text-white mb-2">Week 1 Update</h3>
+IA                   <p class="text-gray-400">Websites & Documents</p>
+                        <span class="mt-4 inline-block text-sm text-yellow-500 font-medium">Pending...</span>
+                    </div>
+                    
+                    <div class="placeholder-card rounded-lg p-6 text-center">
+                        <svg data-lucide="clock-3" class="w-12 h-12 text-gray-500 mx-auto mb-4"></svg>
+                        <h3 class="text-lg font-semibold text-white mb-2">Week 2 Update</h3>
+                        <p class="text-gray-400">Automated Data Analysis</p>
+                        <span class="mt-4 inline-block text-sm text-yellow-500 font-medium">Pending...</span>
+                    </div>
 
-                    <div class="placeholder-card rounded-lg p-6 text-center">
-                        <svg data-lucide="clock-3" class="w-12 h-12 text-gray-500 mx-auto mb-4"></svg>
-                        <h3 class="text-lg font-semibold text-white mb-2">Week 3 Update</h3>
-                        <p class="text-gray-400">Research & Text Analysis</p>
-                        <span class="mt-4 inline-block text-sm text-yellow-500 font-medium">Pending...</span>
-                    </div>
+                    <div class="placeholder-card rounded-lg p-6 text-center">
+                        <svg data-lucide="clock-3" class="w-12 h-12 text-gray-500 mx-auto mb-4"></svg>
+s                   <h3 class="text-lg font-semibold text-white mb-2">Week 3 Update</h3>
+                        <p class="text-gray-400">Research & Text Analysis</p>
+                        <span class="mt-4 inline-block text-sm text-yellow-500 font-medium">Pending...</span>
+                    </div>
 
-                    <div class="placeholder-card rounded-lg p-6 text-center">
-                        <svg data-lucide="clock-3" class="w-12 h-12 text-gray-500 mx-auto mb-4"></svg>
-                        <h3 class="text-lg font-semibold text-white mb-2">Week 4 Update</h3>
-                        <p class="text-gray-400">Custom Chatbots</p>
-                        <span class="mt-4 inline-block text-sm text-yellow-500 font-medium">Pending...</span>
-                    </div>
-                    
-                    <div class="placeholder-card rounded-lg p-6 text-center">
-                        <svg data-lucide="clock-3" class="w-12 h-12 text-gray-500 mx-auto mb-4"></svg>
-                        <h3 class="text-lg font-semibold text-white mb-2">Week 5 Update</h3>
-                        <p class="text-gray-400">Task Automation</p>
-                        <span class="mt-4 inline-block text-sm text-yellow-500 font-medium">Pending...</span>
-                    </div>
+                    <div class="placeholder-card rounded-lg p-6 text-center">
+                        <svg data-lucide="clock-3" class="w-12 h-12 text-gray-500 mx-auto mb-4"></svg>
+                        <h3 class="text-lg font-semibold text-white mb-2">Week 4 Update</h3>
+                        <p class="text-gray-400">Custom Chatbots</p>
+                        <span class="mt-4 inline-block text-sm text-yellow-500 font-medium">Pending...</span>
+              _     </div>
+                    
+                    <div class="placeholder-card rounded-lg p-6 text-center">
+                        <svg data-lucide="clock-3" class="w-12 h-12 text-gray-500 mx-auto mb-4"></svg>
+                        <h3 class="text-lg font-semibold text-white mb-2">Week 5 Update</h3>
+                        <p class="text-gray-400">Task Automation</p>
+                        <span class="mt-4 inline-block text-sm text-yellow-500 font-medium">Pending...</span>
+A                 </div>
 
-                    <div class="placeholder-card rounded-lg p-6 text-center">
-                        <svg data-lucide="clock-3" class="w-12 h-12 text-gray-500 mx-auto mb-4"></svg>
-                        <h3 class="text-lg font-semibold text-white mb-2">Week 6 Update</h3>
-                        <p class="text-gray-400">Communication & Outreach</p>
-                        <span class="mt-4 inline-block text-sm text-yellow-500 font-medium">Pending...</span>
-                    </div>
-                    
-                    <div class="placeholder-card rounded-lg p-6 text-center md:col-span-2 lg:col-span-2">
-                        <svg data-lucide="clock-3" class="w-12 h-12 text-gray-500 mx-auto mb-4"></svg>
-                        <h3 class="text-lg font-semibold text-white mb-2">Week 7-8 Update</h3>
-                        <p class="text-gray-400">Capstone Project</p>
-                        <span class="mt-4 inline-block text-sm text-yellow-500 font-medium">In Progress...</span>
-                    </div>
+                    <div class="placeholder-card rounded-lg p-6 text-center">
+IA                   <svg data-lucide="clock-3" class="w-12 h-12 text-gray-500 mx-auto mb-4"></svg>
+                        <h3 class="text-lg font-semibold text-white mb-2">Week 6 Update</h3>
+                        <p class="text-gray-400">Communication & Outreach</p>
+                        <span class="mt-4 inline-block text-sm text-yellow-500 font-medium">Pending...</span>
+                    </div>
+                    
+                    <div class="placeholder-card rounded-lg p-6 text-center md:col-span-2 lg:col-span-2">
+                        <svg data-lucide="clock-3" class="w-12 h-12 text-gray-500 mx-auto mb-4"></svg>
+s                   <h3 class="text-lg font-semibold text-white mb-2">Week 7-8 Update</h3>
+                        <p class="text-gray-400">Capstone Project</p>
+                        <span class="mt-4 inline-block text-sm text-yellow-500 font-medium">In Progress...</span>
+                    </div>
 
-                </div>
-            </div>
-        </section>
-    </main>
+                </div>
+            </div>
+        </section>
 
-    <!-- Footer -->
-    <footer class="mt-16 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
-            <p class="text-gray-500">
-                &copy; 2025 Assaye Bulti
-            </p>
-            <p class="text-gray-600 text-sm mt-1">
-                @Bulti Genrative AI for Work & Research Productivity.
-            </p>
-        </div>
-    </footer>
+                <section id="contact" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-extrabold gradient-text">Contact for Consultation</h2>
+                    <p class="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">
+                        Interested in collaborating or need expert advice on your data project? Fill out the form below to get in touch.
+                    </p>
+                </div>
+    
+                                                <div class="max-w-xl mx-auto">
+                    <div class="w-full overflow-hidden rounded-lg shadow-lg" style="border: 1px solid #1e293b;">
+                        <iframe 
+                            src="https://docs.google.com/forms/d/e/1FAIpQLSdNQHqq_zv_xqUKXzgyGK7wSOC3sYy__KHO4YtjHZsKkTXoug/viewform?embedded=true" 
+                            class="w-full" 
+              F           height="774" 
+                            frameborder="0" 
+                            marginheight="0" 
+                            marginwidth="0">
+                            Loading…
+                  _     </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+        <footer class="mt-16 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
+            <p class="text-gray-500">
+                &copy; 2025 Assaye Bulti
+  s         </p>
+            <p class="text-gray-600 text-sm mt-1">
+                @Bulti Genrative AI for Work & Research Productivity.
+            </p>
+        </div>
+    </footer>
 
 
 
 </body>
 </html>
-
